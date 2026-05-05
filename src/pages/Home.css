@@ -1,0 +1,29 @@
+:root {
+  /* 
+    Esto hace que el color principal de la pagina sea el verde menta este 
+    y forzar que el navegador coloque modo claro
+  */
+  color-scheme: light;
+  --ion-color-primary: #10b981; 
+}
+
+body {
+  background-image: url('../public/Santo-Domingo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Esto es para que el fondo sea transparente */
+ion-content {
+  --background: transparent;
+}
+
+/* Clase para que las tarjetas/ventanas sean transparentes tipo glassphormism */
+.glass-panel {
+  background: rgba(40, 161, 16, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border-top: 6px solid var(--ion-color-primary);
+
+}
