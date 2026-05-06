@@ -27,7 +27,7 @@ const Proyectos: React.FC = () => {
               <IonCardContent>
                 <p><strong>Sector:</strong> {proyecto.sector}</p>
                 <div className="mt-4 flex gap-2">
-                  <IonButton color="medium" fill="outline">Ver Detalles</IonButton>
+                  <IonButton color="light" fill="outline">Ver Detalles</IonButton>
                   <IonButton color="warning" routerLink={`/opinion?proyectoId=${proyecto.id}`}>🗣️ Dar mi Opinión</IonButton>
                 </div>
               </IonCardContent>

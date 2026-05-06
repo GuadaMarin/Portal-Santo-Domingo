@@ -13,7 +13,16 @@ const Navbar: React.FC = () => {
   return (
     <IonHeader>
       <IonToolbar color="success">
-        <IonTitle slot="start" className="font-bold">Muni Santo Domingo</IonTitle>
+        <IonTitle slot="start" className="font-bold flex items-center">
+         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+           <img 
+              src="public/favicon.png" 
+              alt="Logo Santo Domingo" 
+              style={{ height: '57px', objectFit: 'contain' }}
+            />
+            <span className="hidden md:inline">Muni Santo Domingo</span>
+          </div>
+        </IonTitle>
         <IonButtons slot="end">
           <IonButton routerLink="/inicio">
             <IonIcon slot="start" icon={homeOutline} />
