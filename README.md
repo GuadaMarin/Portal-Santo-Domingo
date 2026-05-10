@@ -41,3 +41,6 @@ La plataforma utiliza una arquitectura plana y modular orientada a facilitar el 
 * **Framework:** Ionic React
 * **Enrutamiento:** React Router DOM
 * **Estilos:** CSS Modules / Ionic Variables
+
+## 5. Links a Figma
+**Link al prototipo en figma: ** https://www.figma.com/proto/013ipqQanul4cv33jTLhFr/PortalWeb_Muni_San.Dom?node-id=0-1&t=cra6mHxdbwDANnk2-1 
