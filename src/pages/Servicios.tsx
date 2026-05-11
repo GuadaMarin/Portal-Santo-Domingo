@@ -67,21 +67,21 @@ const Servicios: React.FC = () => {
                         <IonSelectOption value="centro">Sector Centro (Mar-Jue-Sab 09:00 a 14:00)</IonSelectOption>
                         <IonSelectOption value="sur">Sector Sur (Lun-Mie-Vie 15:00 a 19:00)</IonSelectOption>
                       </IonSelect>
-                      <div className="bg-gray-300 h-48 rounded flex items-center justify-center font-bold text-gray-500">[ Mapa del Recorrido ]</div>
+                      <div className="bg-gray-300 h-48 rounded flex items-center justify-center font-bold text-black-500">[ Mapa del Recorrido ]</div>
                     </div>
                   )}
 
                   {servicio === 'puntos-reciclaje' && (
                     <div>
                       <h2 className="text-xl font-bold mb-4">Ubicación Puntos de Reciclaje (Campanas)</h2>
-                      <div className="bg-gray-300 h-64 rounded flex items-center justify-center font-bold text-gray-500">[ Mapa con Pines Verdes ]</div>
+                      <div className="bg-gray-300 h-64 rounded flex items-center justify-center font-bold text-black-500">[ Mapa con Pines Verdes ]</div>
                     </div>
                   )}
 
                   {servicio === 'zonas-verdes' && (
                     <div>
                       <h2 className="text-xl font-bold mb-4">Parques y Zonas Verdes</h2>
-                      <div className="bg-gray-300 h-64 rounded flex items-center justify-center font-bold text-gray-500">[ Mapa de Parques Comunales ]</div>
+                      <div className="bg-gray-300 h-64 rounded flex items-center justify-center font-bold text-black-500">[ Mapa de Parques Comunales ]</div>
                     </div>
                   )}
 

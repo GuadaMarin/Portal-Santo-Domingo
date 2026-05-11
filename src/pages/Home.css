@@ -4,7 +4,7 @@
     y forzar que el navegador coloque modo claro
   */
   color-scheme: light;
-  --ion-color-primary: #10b981; 
+  --ion-color-primary: rgba(40, 116, 25, 0.7);
 }
 
 body {
@@ -21,7 +21,7 @@ ion-content {
 
 /* Clase para que las tarjetas/ventanas sean transparentes tipo glassphormism */
 .glass-panel {
-  background: rgba(40, 161, 16, 0.7);
+  background: rgba(40, 116, 25, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   border-top: 6px solid var(--ion-color-primary);
