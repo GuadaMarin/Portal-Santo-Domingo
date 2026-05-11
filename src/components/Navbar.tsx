@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
               alt="Logo Santo Domingo" 
               style={{ height: '57px', objectFit: 'contain' }}
             />
-            <span className="hidden md:inline">Muni Santo Domingo</span>
+            <span className="hidden md:inline">Municipalidad de Santo Domingo</span>
           </div>
         </IonTitle>
         <IonButtons slot="end">
