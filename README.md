@@ -43,4 +43,5 @@ La plataforma utiliza una arquitectura plana y modular orientada a facilitar el 
 * **Estilos:** CSS Modules / Ionic Variables
 
 ## 5. Links a Figma
-**Link al prototipo en figma: ** https://www.figma.com/proto/013ipqQanul4cv33jTLhFr/PortalWeb_Muni_San.Dom?node-id=0-1&t=cra6mHxdbwDANnk2-1 
+**Link al prototipo en figma:** https://www.figma.com/proto/013ipqQanul4cv33jTLhFr/PortalWeb_Muni_San.Dom?node-id=1-3&p=f&t=dPYWLWwAmm5rmG3A-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3
+**Link a figma:** https://www.figma.com/design/013ipqQanul4cv33jTLhFr/PortalWeb_Muni_San.Dom?node-id=0-1&t=Drwdu0TrpZ3ev1Vw-1
