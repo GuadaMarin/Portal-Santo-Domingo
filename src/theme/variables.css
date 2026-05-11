@@ -8,6 +8,7 @@
   color-scheme: light;
   --ion-color-primary: rgb(42, 100, 40); 
   --ion-font-family: 'Nunito', sans-serif;
+  --ion-color-success: #1f5f3e;
 }
 
 body {
