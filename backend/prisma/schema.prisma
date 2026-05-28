@@ -1,13 +1,109 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+ // Get a free hosted Postgres database in seconds: `npx create-db`
 
-// Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
+
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
+
+
+// Usuarios y roles varios-------------------------------------
+model Usuario{
+  rut           String     @id
+  password      String     // la contraseña debe ser encriptada con bcrypt
+  rol            String    @default("Ciudadano") // el rol puede ser de ciudadano o admin
+  opiniones     Opinion[]
+  recolecciones RecoleccionDomicilio[]
+  peticiones    PeticionReciclaje[]
+}
+
+
+// Proyectos------------------------------------------
+model Proyecto {
+  id              Int       @id @default(autoincrement())
+  nombre          String
+  rutEmpresa      String
+  ubicacion       String
+  fechaInicio     DateTime
+  duracionMeses   Int
+  estado          String    // Ej: "En Planificación", "Ejecución"
+  opiniones       Opinion[]
+}
+
+// Noticias---------------------------------------------------
+model Noticia {
+  id              Int       @id @default(autoincrement())
+  titulo          String
+  contenido       String
+  fechaPublicacion DateTime @default(now())
+  nombrePeriodista String
+}
+
+// Actividades-------------------------------------------------
+model Actividad {
+  id              Int       @id @default(autoincrement())
+  titulo          String
+  descripcion     String
+  ubicacion       String
+  fecha           DateTime
+  cuposTotales    Int
+  cuposOcupados   Int       @default(0)
+}
+
+
+// Opiniones--------------------------------------------------
+model Opinion {
+  id              Int      @id @default(autoincrement())
+  calificacion    Int      // 1 a 5
+  comentario      String
+
+  // Relaciones
+  proyectoId      Int
+  proyecto        Proyecto @relation(fields: [proyectoId], references: [id])
+  usuarioRut      String
+  usuario         Usuario  @relation(fields: [usuarioRut], references: [rut])
+
+}
+
+
+// Servicios------------------------------------------------------
+model RecoleccionDomicilio {
+  id              Int      @id @default(autoincrement())
+  tipoBasura      String
+  ubicacion       String
+  motivo          String
+  estado          String   @default("PENDIENTE")
+  usuarioRut      String
+  usuario         Usuario  @relation(fields: [usuarioRut], references: [rut])
+}
+
+
+model PeticionReciclaje {
+  id              Int      @id @default(autoincrement())
+  ubicacionPropuesta String
+  motivo          String
+  estado          String   @default("PENDIENTE")
+  usuarioRut      String
+  usuario         Usuario  @relation(fields: [usuarioRut], references: [rut])
+}
+
+
+model PuntoReciclaje {
+  id              Int      @id @default(autoincrement())
+  sector          String
+  ubicacion       String
+  tiposTachos     String   // Ej: "Vidrio, Cartón"
+}
+
+
+model ZonaVerde {
+  id              Int      @id @default(autoincrement())
+  nombre          String
+  sector          String
+  ubicacion       String
+} 
