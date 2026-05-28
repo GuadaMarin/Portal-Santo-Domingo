@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  /* 
+    Esto hace que el color principal de la pagina sea el verde menta este 
+    y forzar que el navegador coloque modo claro
+  */
+  color-scheme: light;
+  --ion-color-primary: rgb(42, 100, 40); 
+  --ion-font-family: 'Nunito', sans-serif;
+  --ion-color-success: #1f5f3e;
+}
+
+body {
+  background-image: url('../Santo-Domingo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Esto es para que el fondo sea transparente */
+ion-content {
+  --background: transparent;
+}
+
+/* Clase para que las tarjetas/ventanas sean transparentes tipo glassphormism */
+.glass-panel {
+  background: rgba(237, 238, 239, 0.7) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 6px solid var(--ion-color-success, #1b6b0b);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+}
+.glass-panel ion-card-title, 
+.glass-panel p, 
+.glass-panel strong, 
+.glass-panel ion-label {
+  color: #000000 !important; /* Gris oscuro para máximo contraste */
+}
